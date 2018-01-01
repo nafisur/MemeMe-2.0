@@ -15,6 +15,7 @@
 		5001D8351FF558E900F3650A /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5001D8341FF558E900F3650A /* Meme.swift */; };
 		5001D8371FF55B8400F3650A /* MemeTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5001D8361FF55B8400F3650A /* MemeTableVC.swift */; };
 		5001D8391FF55BA000F3650A /* MemeCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5001D8381FF55BA000F3650A /* MemeCollectionVC.swift */; };
+		502594B91FFA9FA100372D4F /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502594B81FFA9FA100372D4F /* CustomCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		5001D8341FF558E900F3650A /* Meme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
 		5001D8361FF55B8400F3650A /* MemeTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeTableVC.swift; sourceTree = "<group>"; };
 		5001D8381FF55BA000F3650A /* MemeCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeCollectionVC.swift; sourceTree = "<group>"; };
+		502594B81FFA9FA100372D4F /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				5001D8341FF558E900F3650A /* Meme.swift */,
 				5001D8241FF5582400F3650A /* Main.storyboard */,
 				5001D8361FF55B8400F3650A /* MemeTableVC.swift */,
+				502594B81FFA9FA100372D4F /* CustomCollectionViewCell.swift */,
 				5001D8381FF55BA000F3650A /* MemeCollectionVC.swift */,
 				5001D8271FF5582400F3650A /* Assets.xcassets */,
 				5001D8291FF5582400F3650A /* LaunchScreen.storyboard */,
@@ -146,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5001D8351FF558E900F3650A /* Meme.swift in Sources */,
+				502594B91FFA9FA100372D4F /* CustomCollectionViewCell.swift in Sources */,
 				5001D8371FF55B8400F3650A /* MemeTableVC.swift in Sources */,
 				5001D8391FF55BA000F3650A /* MemeCollectionVC.swift in Sources */,
 				5001D8331FF5584E00F3650A /* CreateMemeVC.swift in Sources */,
