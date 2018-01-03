@@ -28,19 +28,6 @@ class CreateMemeVC: UIViewController,UINavigationControllerDelegate, UIImagePick
         bottomTextField.backgroundColor = UIColor.clear
         memeImgView.contentMode = .scaleAspectFit //image should be aspect fit
         shareButton.isEnabled = false //disabled until an image is chosen
-    
-        let memeTextAttributes: [String:Any] = [
-            NSAttributedStringKey.strokeColor.rawValue : UIColor.black,
-            NSAttributedStringKey.foregroundColor.rawValue : UIColor.white,
-            NSAttributedStringKey.font.rawValue : UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
-            NSAttributedStringKey.strokeWidth.rawValue : -4.0
-        ]
-        
-       topTextField.defaultTextAttributes = memeTextAttributes
-        bottomTextField.defaultTextAttributes = memeTextAttributes
-    
-        topTextField.delegate = self
-        bottomTextField.delegate = self
         
         if !(UIImagePickerController.isSourceTypeAvailable(.camera)) { //check if camera is not available //simulator
             
@@ -48,8 +35,22 @@ class CreateMemeVC: UIViewController,UINavigationControllerDelegate, UIImagePick
         }
         NotificationCenter.default.addObserver(self, selector: #selector(CreateMemeVC.keyboardWillShow(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(CreateMemeVC.keyboardWillHide(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+            setTextFields(textField: topTextField)
+            setTextFields(textField: bottomTextField)
     }//viewDidLoad Ends here
-    
+    func setTextFields(textField:UITextField){
+        
+        textField.delegate = self
+        let memeTextAttributes: [String:Any] = [
+            NSAttributedStringKey.strokeColor.rawValue : UIColor.black,
+            NSAttributedStringKey.foregroundColor.rawValue : UIColor.white,
+            NSAttributedStringKey.font.rawValue : UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
+            NSAttributedStringKey.strokeWidth.rawValue : -4.0
+        ]
+        
+        textField.defaultTextAttributes = memeTextAttributes
+        textField.textAlignment = NSTextAlignment.center
+    }
     @objc func keyboardWillShow(_ notification:Notification) {
         if bottomTextField.isFirstResponder {
             view.frame.origin.y = -(keyboardHeight(notification))
