@@ -22,6 +22,10 @@ class CreateMemeVC: UIViewController,UINavigationControllerDelegate, UIImagePick
     override func viewDidLoad() {
         super.viewDidLoad()
    
+        topTextField.autocapitalizationType = .allCharacters
+        bottomTextField.autocapitalizationType = .allCharacters
+        topTextField.backgroundColor = UIColor.clear
+        bottomTextField.backgroundColor = UIColor.clear
         memeImgView.contentMode = .scaleAspectFit //image should be aspect fit
         shareButton.isEnabled = false //disabled until an image is chosen
     
@@ -105,19 +109,22 @@ class CreateMemeVC: UIViewController,UINavigationControllerDelegate, UIImagePick
         textField.resignFirstResponder()
         return true
     }
-    
+    func setupBars(hidden : Bool){
+        
+        navBar.isHidden = hidden
+        toolBar.isHidden = hidden
+        
+    }
     func generateMemedImage() -> UIImage {
         
-        navBar.isHidden = true
-        toolBar.isHidden = true
+       setupBars(hidden: true)
    
         UIGraphicsBeginImageContext(self.view.frame.size)
         view.drawHierarchy(in: self.view.frame, afterScreenUpdates: true)
         let memedImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
    
-        navBar.isHidden = false
-        toolBar.isHidden = false
+        setupBars(hidden: false)
         
         return memedImage
     }

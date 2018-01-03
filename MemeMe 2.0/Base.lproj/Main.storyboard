@@ -178,8 +178,8 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jBZ-MU-H5v">
                                 <rect key="frame" x="0.0" y="64" width="375" height="559"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QGt-Xw-xQZ">
-                                <rect key="frame" x="141" y="99" width="93" height="50"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QGt-Xw-xQZ">
+                                <rect key="frame" x="149.5" y="99" width="76" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="A2x-W5-j5R"/>
                                 </constraints>
@@ -187,8 +187,8 @@
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="35"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1IO-AM-3cR">
-                                <rect key="frame" x="99.5" y="538" width="176" height="50"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1IO-AM-3cR">
+                                <rect key="frame" x="108" y="538" width="159" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="bzO-nx-ISx"/>
                                 </constraints>
@@ -231,6 +231,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CbE-yk-qRD" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1535" y="107"/>
+        </scene>
+        <!--Meme DetailVC-->
+        <scene sceneID="ZWk-Ge-DmJ">
+            <objects>
+                <viewController storyboardIdentifier="memeDetailVC" id="Rx2-bh-KHw" customClass="MemeDetailVC" customModule="MemeMe_2_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="l01-Fq-YkB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4mG-NH-n4K">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4mG-NH-n4K" firstAttribute="leading" secondItem="OPX-QO-y8L" secondAttribute="leading" id="7mv-iL-s85"/>
+                            <constraint firstItem="4mG-NH-n4K" firstAttribute="trailing" secondItem="OPX-QO-y8L" secondAttribute="trailing" id="7pu-Tt-bzG"/>
+                            <constraint firstItem="4mG-NH-n4K" firstAttribute="top" secondItem="l01-Fq-YkB" secondAttribute="top" id="PJL-d5-AIj"/>
+                            <constraint firstItem="4mG-NH-n4K" firstAttribute="bottom" secondItem="OPX-QO-y8L" secondAttribute="bottom" id="eCc-Cb-s4z"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OPX-QO-y8L"/>
+                    </view>
+                    <connections>
+                        <outlet property="memeImgView" destination="4mG-NH-n4K" id="4Iv-En-cuH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qb1-cf-jx3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2215.1999999999998" y="106.59670164917542"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="6D6-dn-K7m">

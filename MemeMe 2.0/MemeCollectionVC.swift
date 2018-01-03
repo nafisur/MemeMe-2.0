@@ -16,8 +16,6 @@ class MemeCollectionVC: UIViewController,UICollectionViewDelegate, UICollectionV
         super.viewDidLoad()
         memeCollectionView.delegate = self
         memeCollectionView.dataSource = self
-
-      
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -36,5 +34,12 @@ class MemeCollectionVC: UIViewController,UICollectionViewDelegate, UICollectionV
         
         cell.imgView.image = memes[indexPath.row].memedImage
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let detailController = self.storyboard!.instantiateViewController(withIdentifier:
+            "memeDetailVC") as! MemeDetailVC
+        detailController.meme = memes[indexPath.row]
+        self.navigationController!.pushViewController(detailController, animated: true)
     }
 }
