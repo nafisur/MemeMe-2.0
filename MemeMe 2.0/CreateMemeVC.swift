@@ -22,10 +22,6 @@ class CreateMemeVC: UIViewController,UINavigationControllerDelegate, UIImagePick
     override func viewDidLoad() {
         super.viewDidLoad()
    
-        topTextField.autocapitalizationType = .allCharacters
-        bottomTextField.autocapitalizationType = .allCharacters
-        topTextField.backgroundColor = UIColor.clear
-        bottomTextField.backgroundColor = UIColor.clear
         memeImgView.contentMode = .scaleAspectFit //image should be aspect fit
         shareButton.isEnabled = false //disabled until an image is chosen
         
@@ -41,6 +37,8 @@ class CreateMemeVC: UIViewController,UINavigationControllerDelegate, UIImagePick
     func setTextFields(textField:UITextField){
         
         textField.delegate = self
+        textField.autocapitalizationType = .allCharacters
+        textField.backgroundColor = UIColor.clear
         let memeTextAttributes: [String:Any] = [
             NSAttributedStringKey.strokeColor.rawValue : UIColor.black,
             NSAttributedStringKey.foregroundColor.rawValue : UIColor.white,
